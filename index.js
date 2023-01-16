@@ -6,12 +6,14 @@ for (var i = 0; i < noOfDrums; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     var letterBank = this.innerHTML;
     makeSound(letterBank);
+    makeanimation(letterBank);
   });
 }
 
 //Detecting Keyboard Press
 document.addEventListener("keypress", function (event) {
   makeSound(event.key);
+  makeanimation(event.key);
 });
 
 function makeSound(key) {
